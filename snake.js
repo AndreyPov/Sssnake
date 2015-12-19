@@ -24,14 +24,17 @@ bornSnake(); //create field with a snake on it
 
 function everyMove()
 {
-
+	
 }
 
 
-function food()
+function food() //add food on the field
 {
-
+	var rowFood = Math.floor(Math.random()*29);
+	var columnFood = Math.floor(Math.random()*29);
+	$("#cell_"+rowFood+"_"+columnFood).addClass("cellFood");
 }
+food();
 
 $(document).keydown(function(e){ //on KeyPressed
 	switch(e.keyCode)	{
